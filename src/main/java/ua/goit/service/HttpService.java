@@ -40,7 +40,7 @@ public class HttpService<E> {
                 .build();
     }
 
-    protected static <T> HttpRequest requestWithBody(String methodName, String url, T entity) {
+    protected static <Е> HttpRequest requestWithBody(String methodName, String url, T entity) {
         return HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .header("Content-type", "application/json")
